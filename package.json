@@ -1,6 +1,6 @@
 {
-  "name": "nodejs-new",
-  "version": "1.0.0",
+  "name": "${PACKAGE_ID}",
+  "version": "${PACKAGE_ID}",
   "description": "new node project for testing multiple workflows",
   "main": "index.js",
   "scripts": {
@@ -13,4 +13,4 @@
     "express": "^4.21.1"
   }
 }
-  
+   
