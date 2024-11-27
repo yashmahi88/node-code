@@ -4,7 +4,8 @@
   "description": "new node project for testing multiple workflows",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": ""
   },
   "author": "",
   "license": "ISC",
