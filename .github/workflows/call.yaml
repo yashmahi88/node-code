@@ -1,0 +1,19 @@
+name: Call Package Workflows
+
+on:
+  push:
+    branches:
+      - development
+      - release
+
+jobs:
+  call_setup_and_build:
+    uses: yashmahi88/python-package/.github/workflows/build-environment.yml@development
+    with:
+      LANGUAGE: ${{ vars.LANGUAGE }}  
+
+  call_package_and_upload:
+    needs: call_setup_and_build
+    uses: yashmahi88/python-package/.github/workflows/package.yml@development
+    with:
+      LANGUAGE: ${{ vars.LANGUAGE }}   

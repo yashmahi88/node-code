@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-new",
+  "version": "1.0.0",
+  "description": "new node project for testing multiple workflows",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
