@@ -8,12 +8,12 @@ on:
 
 jobs:
   call_setup_and_build:
-    uses: yashmahi88/python-package/.github/workflows/build-environment.yml@development
+    uses: yashmahi88/.github/.github/workflows/build-environment.yml@main
     with:
       LANGUAGE: ${{ vars.LANGUAGE }}  
 
   call_package_and_upload:
     needs: call_setup_and_build
-    uses: yashmahi88/python-package/.github/workflows/package.yml@development
+    uses: yashmahi88/.github/.github/workflows/publish-package.yml@main
     with:
-      LANGUAGE: ${{ vars.LANGUAGE }}   
+      LANGUAGE: ${{ vars.LANGUAGE }}  
