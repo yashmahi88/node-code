@@ -10,10 +10,23 @@ jobs:
   call_setup_and_build:
     uses: yashmahi88/.github/.github/workflows/build-environment.yml@main
     with:
-      LANGUAGE: ${{ vars.LANGUAGE }}  
+      LANGUAGE: ${{ vars.LANGUAGE }}
 
   call_package_and_upload:
     needs: call_setup_and_build
     uses: yashmahi88/.github/.github/workflows/publish-package.yml@main
     with:
-      LANGUAGE: ${{ vars.LANGUAGE }}  
+      LANGUAGE: ${{ vars.LANGUAGE }}
+
+  call_push_to_nexus: 
+    needs: call_package_and_upload
+    uses: yashmahi88/.github/.github/workflows/push-nexus.yml@main
+    with:
+      LANGUAGE: ${{ vars.LANGUAGE }}
+    secrets: 
+      NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }} 
+      NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
+      NEXUS_API_KEY: ${{ secrets.NEXUS_API_KEY }}
+      NEXUS_DEV_SOURCE: ${{ secrets.NEXUS_DEV_SOURCE }}
+      NEXUS_RELEASE_SOURCE: ${{ secrets.NEXUS_RELEASE_SOURCE }}
+      NEXUS_TAG_SOURCE: ${{ secrets.NEXUS_TAG_SOURCE }} 
