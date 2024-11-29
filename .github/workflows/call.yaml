@@ -29,4 +29,4 @@ jobs:
       NEXUS_API_KEY: ${{ secrets.NEXUS_API_KEY }}
       NEXUS_DEV_SOURCE: ${{ secrets.NEXUS_DEV_SOURCE }}
       NEXUS_RELEASE_SOURCE: ${{ secrets.NEXUS_RELEASE_SOURCE }}
-      NEXUS_TAG_SOURCE: ${{ secrets.NEXUS_TAG_SOURCE }} 
+      NEXUS_TAG_SOURCE: ${{ secrets.NEXUS_TAG_SOURCE }}
