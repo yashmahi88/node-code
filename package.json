@@ -1,5 +1,5 @@
 {
-  "name": "${PACKAGE_ID}",
+    "name": "${PACKAGE_ID}",
   "version": "${PACKAGE_VERSION}",
   "description": "new node project for testing multiple workflows",
   "main": "index.js",
