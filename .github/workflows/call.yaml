@@ -30,4 +30,4 @@ jobs:
       NEXUS_DEV_SOURCE: ${{ secrets.NEXUS_DEV_SOURCE }}
       NEXUS_RELEASE_SOURCE: ${{ secrets.NEXUS_RELEASE_SOURCE }}
       NEXUS_TAG_SOURCE: ${{ secrets.NEXUS_TAG_SOURCE }}
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }} 
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
